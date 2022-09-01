@@ -48,7 +48,11 @@ exemplos em Haskell do uso das seguintes funções disponíveis no
 Prelude: flip, ord, max, min, curry, uncurry. Para cada uma destas 
 funções você deverá encontrar, executar e testar no mínimo dois 
 exemplos. -}
+uncurried :: Int -> Int -> Int
+uncurried = curry (\ (x,y) -> x^2+y^2)
 
+potencia :: (Int, Int) -> Int
+potencia = uncurry (^)
 
 main = do
   putStr "\nFunc. 1: entrada:3; resultado:"
@@ -89,8 +93,35 @@ main = do
   print(comprimento [1,2,3,4,5,6,7,8])
   putStr "Func. 7: entrada:[1,2,3,4]; resultado:"
   print(comprimento [1,2,3,4])
-  putStr "Func. 7: entrada:[0,1,2,3,4]; resultado:"
-  print(comprimento [0,1,2,3,4])
+  
+  putStr "Func. 8: entrada:flip (/) 2 5; resultado:"
+  print(flip (/) 2 5)
+  putStr "Func. 8: entrada:flip (>) 21 15.0; resultado:"
+  print(flip (>) 21 15.0)
+  
+  putStr "Func. 8: entrada:maximum [1,100,50]; resultado:"
+  print(maximum [1,100,50])
+  putStr "Func. 8: entrada:maximum [-5,-50,-100]; resultado:"
+  print(maximum [-5,-50,-100])
+  
+  putStr "Func. 8: entrada:minimum [1,100,50]; resultado:"
+  print(minimum [1,100,50])
+  putStr "Func. 8: entrada:minimum [-5,-50,-100]; resultado:"
+  print(minimum [-5,-50,-100])
+  
+  putStr "Func. 8: entrada:uncurried 4 5; resultado:"
+  print(uncurried 4 5)
+  putStr "Func. 8: entrada:uncurried 5 6; resultado:"
+  print(uncurried 5 6)
+  
+  putStr "Func. 8: entrada:potencia (2,3); resultado:"
+  print(potencia (2,3))
+  putStr "Func. 8: entrada:potencia (4,3); resultado:"
+  print(potencia (4,3))
+  putStr "Func. 8: entrada:potencia (2,10); resultado:"
+  print(potencia (2,10))
+  
+
 
 
 
