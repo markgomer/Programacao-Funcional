@@ -1,3 +1,5 @@
+import Data.Char
+
 {-1. Escreva  uma  função  chamada  fatorialn  que  usando  o  
 operador range  e  a  função  foldr devolva o fatorial de n. -}
 fatorialn :: Int -> Int 
@@ -98,6 +100,15 @@ main = do
   print(flip (/) 2 5)
   putStr "Func. 8: entrada:flip (>) 21 15.0; resultado:"
   print(flip (>) 21 15.0)
+
+  putStr "Func. 8: entrada:ord 'a'; resultado:"
+  print(ord 'a')
+  putStr "Func. 8: entrada:ord 'A'; resultado:"
+  print(ord 'A')
+  putStr "Func. 8: entrada:ord 'b'; resultado:"
+  print(ord 'b')
+  putStr "Func. 8: entrada:ord 'B'; resultado:"
+  print(ord 'B')
   
   putStr "Func. 8: entrada:maximum [1,100,50]; resultado:"
   print(maximum [1,100,50])
